@@ -1,0 +1,486 @@
+*,
+**::before,
+**::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background-color: seagreen;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  max-width: 1500px;
+  width: 90%;
+  height: 300px;
+  margin: 1rem auto;
+}
+
+label {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  margin-top: 2rem;
+  display: inline-block;
+}
+
+.box1 {
+  height: 100px;
+  border: 3px solid tomato;
+  padding: 1rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (150px)[2];
+      grid-template-columns: repeat(2, 150px);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.box1:hover .item1 {
+  background-color: tomato;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.box1:hover .item2 {
+  background-color: tomato;
+  -webkit-transform: rotate(720deg) skew(45deg) translateX(20px);
+          transform: rotate(720deg) skew(45deg) translateX(20px);
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.item {
+  background-color: palegreen;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #0c0b0b;
+  font-weight: 900;
+}
+
+.item1 {
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.item2 {
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.box3d-container {
+  height: 100px;
+  border: 3px solid tomato;
+  padding: 1rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: ()[3];
+      grid-template-columns: repeat(3);
+  grid-auto-flow: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.item3 {
+  border: 5px solid white;
+  width: 150px;
+  height: 100px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.item3 .spin1 {
+  width: 150px;
+  height: 100px;
+  background-color: rgba(128, 0, 128, 0.755);
+  -webkit-transform: perspective(60px) rotateX(45deg);
+          transform: perspective(60px) rotateX(45deg);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: white;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.item3 .spin2 {
+  width: 150px;
+  height: 100px;
+  background-color: rgba(128, 0, 128, 0.755);
+  -webkit-transform: perspective(110px) rotateY(45deg);
+          transform: perspective(110px) rotateY(45deg);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: white;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.item3 .spin3 {
+  width: 150px;
+  height: 100px;
+  background-color: rgba(128, 0, 128, 0.755);
+  -webkit-transform: perspective(110px) rotateZ(45deg);
+          transform: perspective(110px) rotateZ(45deg);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: white;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.animation-container {
+  height: 100px;
+  border: 3px solid tomato;
+  padding: 1rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: ()[3];
+      grid-template-columns: repeat(3);
+  grid-auto-flow: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.animation-container:hover .animation-box1 {
+  -webkit-animation-name: myAnimation;
+          animation-name: myAnimation;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-iteration-count: 4;
+          animation-iteration-count: 4;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  position: relative;
+}
+
+.animation-box1 {
+  border: 5px solid white;
+  width: 150px;
+  height: 100px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 3s;
+          transition-duration: 3s;
+}
+
+.animation-box2 {
+  border: 5px solid white;
+  width: 150px;
+  height: 100px;
+  display: -ms-grid;
+  display: grid;
+}
+
+.animation-box3 {
+  border: 5px solid white;
+  width: 150px;
+  height: 100px;
+  display: -ms-grid;
+  display: grid;
+}
+
+.ani-2 {
+  width: 150px;
+  height: 100px;
+  background-color: rgba(128, 0, 128, 0.755);
+  -webkit-transform: perspective(70px) rotateX(45deg);
+          transform: perspective(70px) rotateX(45deg);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: white;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.ani-2:hover {
+  -webkit-animation: animation-2 3s linear infinite;
+          animation: animation-2 3s linear infinite;
+}
+
+.ani-3 {
+  width: 150px;
+  height: 100px;
+  background-color: rgba(128, 0, 128, 0.755);
+  -webkit-transform: perspective(110px) rotateY(45deg);
+          transform: perspective(110px) rotateY(45deg);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: white;
+  font-weight: 900;
+  font-size: 2rem;
+  -webkit-transition: all;
+  transition: all;
+  -webkit-transition-duration: 3s;
+          transition-duration: 3s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.ani-3:hover {
+  -webkit-animation: animation-3 3s linear infinite;
+          animation: animation-3 3s linear infinite;
+}
+
+@-webkit-keyframes myAnimation {
+  0% {
+    background-color: purple;
+    left: 0;
+  }
+  50% {
+    background-color: #0b8000;
+    left: 50px;
+  }
+  100% {
+    background-color: #0d0080;
+    left: 200px;
+  }
+}
+
+@keyframes myAnimation {
+  0% {
+    background-color: purple;
+    left: 0;
+  }
+  50% {
+    background-color: #0b8000;
+    left: 50px;
+  }
+  100% {
+    background-color: #0d0080;
+    left: 200px;
+  }
+}
+
+@-webkit-keyframes animation-2 {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes animation-2 {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@-webkit-keyframes animation-3 {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) skew(45deg);
+            transform: rotateX(360deg) skew(45deg);
+  }
+}
+
+@keyframes animation-3 {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) skew(45deg);
+            transform: rotateX(360deg) skew(45deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
